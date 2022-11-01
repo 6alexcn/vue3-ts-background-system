@@ -1,14 +1,6 @@
 import { http } from '../utils/request'
 
-interface TableItem {
-  id: number
-  name: string
-  money: number
-  address: string
-  state: string
-  date: string
-  thumb: number
-}
+import { TableItem } from './types'
 
 export interface DataRes {
   list: TableItem[]
