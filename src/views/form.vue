@@ -15,12 +15,7 @@
 				<el-form-item label="日期时间">
 					<el-col :span="11">
 						<el-form-item prop="date1">
-							<el-date-picker
-								type="date"
-								placeholder="选择日期"
-								v-model="form.date1"
-								style="width: 100%"
-							></el-date-picker>
+							<el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%"></el-date-picker>
 						</el-form-item>
 					</el-col>
 					<el-col class="line" :span="2">-</el-col>
@@ -64,7 +59,6 @@
 </template>
 
 <script setup lang="ts" name="baseform">
-import { reactive, ref } from 'vue';
 import { ElMessage } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 

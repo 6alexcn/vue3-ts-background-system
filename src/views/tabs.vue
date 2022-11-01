@@ -64,7 +64,6 @@
 </template>
 
 <script setup lang="ts" name="tabs">
-import { ref, reactive } from 'vue';
 
 const message = ref('first');
 const state = reactive({
@@ -110,6 +109,7 @@ const handleRestore = (index: number) => {
 .message-title {
 	cursor: pointer;
 }
+
 .handle-row {
 	margin-top: 30px;
 }

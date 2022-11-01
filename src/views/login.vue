@@ -11,12 +11,7 @@
 					</el-input>
 				</el-form-item>
 				<el-form-item prop="password">
-					<el-input
-						type="password"
-						placeholder="password"
-						v-model="param.password"
-						@keyup.enter="submitForm(login)"
-					>
+					<el-input type="password" placeholder="password" v-model="param.password" @keyup.enter="submitForm(login)">
 						<template #prepend>
 							<el-button :icon="Lock"></el-button>
 						</template>
@@ -32,10 +27,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
 import { useTagsStore } from '../store/tags';
 import { usePermissStore } from '../store/permiss';
-import { useRouter } from 'vue-router';
 import { ElMessage } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 import { Lock, User } from '@element-plus/icons-vue';
@@ -74,7 +67,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
 			localStorage.setItem('ms_keys', JSON.stringify(keys));
 			router.push('/');
 		} else {
-			ElMessage.error('登录成功');
+			ElMessage.error('登录失败');
 			return false;
 		}
 	});
@@ -92,6 +85,7 @@ tags.clearTags();
 	background-image: url(../assets/img/login-bg.jpg);
 	background-size: 100%;
 }
+
 .ms-title {
 	width: 100%;
 	line-height: 50px;
@@ -100,6 +94,7 @@ tags.clearTags();
 	color: #fff;
 	border-bottom: 1px solid #ddd;
 }
+
 .ms-login {
 	position: absolute;
 	left: 50%;
@@ -110,17 +105,21 @@ tags.clearTags();
 	background: rgba(255, 255, 255, 0.3);
 	overflow: hidden;
 }
+
 .ms-content {
 	padding: 30px 30px;
 }
+
 .login-btn {
 	text-align: center;
 }
+
 .login-btn button {
 	width: 100%;
 	height: 36px;
 	margin-bottom: 10px;
 }
+
 .login-tips {
 	font-size: 12px;
 	line-height: 30px;

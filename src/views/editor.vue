@@ -11,7 +11,6 @@
 
 <script setup lang="ts" name="editor">
 import WangEditor from 'wangeditor';
-import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
 
 const editor = ref(null);
 const content = reactive({
@@ -34,4 +33,6 @@ const syncHTML = () => {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

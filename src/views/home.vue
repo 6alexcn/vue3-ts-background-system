@@ -1,8 +1,8 @@
 <template>
-	<v-header />
-	<v-sidebar />
+	<Header />
+	<Sidebar />
 	<div class="content-box" :class="{ 'content-collapse': sidebar.collapse }">
-		<v-tags></v-tags>
+		<Tags></Tags>
 		<div class="content">
 			<router-view v-slot="{ Component }">
 				<transition name="move" mode="out-in">
@@ -13,13 +13,11 @@
 			</router-view>
 		</div>
 	</div>
-</template>
+</template> 
+
 <script setup lang="ts">
 import { useSidebarStore } from '../store/sidebar';
 import { useTagsStore } from '../store/tags';
-import vHeader from '../components/header.vue';
-import vSidebar from '../components/sidebar.vue';
-import vTags from '../components/tags.vue';
 
 const sidebar = useSidebarStore();
 const tags = useTagsStore();

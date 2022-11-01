@@ -7,6 +7,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    403: typeof import('./views/403.vue')['default']
+    404: typeof import('./views/404.vue')['default']
+    App: typeof import('./App.vue')['default']
+    Charts: typeof import('./views/charts.vue')['default']
+    Dashboard: typeof import('./views/dashboard.vue')['default']
+    Donate: typeof import('./views/donate.vue')['default']
+    Editor: typeof import('./views/editor.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
@@ -43,10 +50,20 @@ declare module '@vue/runtime-core' {
     ElTimePicker: typeof import('element-plus/es')['ElTimePicker']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     ElUpload: typeof import('element-plus/es')['ElUpload']
-    Header: typeof import('./src/components/header.vue')['default']
+    Form: typeof import('./views/form.vue')['default']
+    Header: typeof import('./components/header.vue')['default']
+    Home: typeof import('./views/home.vue')['default']
+    Icon: typeof import('./views/icon.vue')['default']
+    Login: typeof import('./views/login.vue')['default']
+    Markdown: typeof import('./views/markdown.vue')['default']
+    Permission: typeof import('./views/permission.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Sidebar: typeof import('./src/components/sidebar.vue')['default']
-    Tags: typeof import('./src/components/tags.vue')['default']
+    Sidebar: typeof import('./components/sidebar.vue')['default']
+    Table: typeof import('./views/table.vue')['default']
+    Tabs: typeof import('./views/tabs.vue')['default']
+    Tags: typeof import('./components/tags.vue')['default']
+    Upload: typeof import('./views/upload.vue')['default']
+    User: typeof import('./views/user.vue')['default']
   }
 }

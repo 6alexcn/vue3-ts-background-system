@@ -9,21 +9,14 @@
 			</el-select>
 		</div>
 		<div class="mgb20 tree-wrapper">
-			<el-tree
-				ref="tree"
-				:data="data"
-				node-key="id"
-				default-expand-all
-				show-checkbox
-				:default-checked-keys="checkedKeys"
-			/>
+			<el-tree ref="tree" :data="data" node-key="id" default-expand-all show-checkbox
+				:default-checked-keys="checkedKeys" />
 		</div>
 		<el-button type="primary" @click="onSubmit">保存权限</el-button>
 	</div>
 </template>
 
 <script setup lang="ts" name="permission">
-import { ref } from 'vue';
 import { ElTree } from 'element-plus';
 import { usePermissStore } from '../store/permiss';
 
@@ -131,6 +124,7 @@ const handleChange = (val: string[]) => {
 .tree-wrapper {
 	max-width: 500px;
 }
+
 .label {
 	font-size: 14px;
 }

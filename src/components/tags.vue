@@ -1,14 +1,11 @@
 <template>
 	<div class="tags" v-if="tags.show">
 		<ul>
-			<li
-				class="tags-li"
-				v-for="(item, index) in tags.list"
-				:class="{ active: isActive(item.path) }"
-				:key="index"
-			>
+			<li class="tags-li" v-for="(item, index) in tags.list" :class="{ active: isActive(item.path) }" :key="index">
 				<router-link :to="item.path" class="tags-li-title">{{ item.title }}</router-link>
-				<el-icon @click="closeTags(index)"><Close /></el-icon>
+				<el-icon @click="closeTags(index)">
+					<Close />
+				</el-icon>
 			</li>
 		</ul>
 		<div class="tags-close-box">
@@ -32,7 +29,6 @@
 
 <script setup lang="ts">
 import { useTagsStore } from '../store/tags';
-import { onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();
