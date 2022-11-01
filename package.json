@@ -41,12 +41,6 @@
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-tsc": "^0.38.4"
   },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "npm run lint",
-      "npm run format"
-    ]
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
